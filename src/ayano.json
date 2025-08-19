@@ -28,7 +28,7 @@
         },
         {
           "name": "Info Turnamen",
-          "desc": "Info Turnamen Mobile Legend,
+          "desc": "Info Turnamen Mobile Legend",
           "path": "/search/infoturney",
           "status": "ready",
           "requireKey": false

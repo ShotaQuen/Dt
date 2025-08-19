@@ -25,6 +25,13 @@
           "params": {
             "query": "Masukkan Query yang ingin dicari"
           }
+        },
+        {
+          "name": "Info Turnamen",
+          "desc": "Info Turnamen Mobile Legend,
+          "path": "/search/infoturney",
+          "status": "ready",
+          "requireKey": false
         }
       ]
     }

@@ -8,11 +8,14 @@ const basicAuth = require('express-basic-auth');
 const app = express();
 const pricingJsonPath = path.join(__dirname, 'src', 'pricing.json');
 
-const serviceAccount = require('./serviceAccountKey.json'); // ambil service account key json dari firebase console
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-  databaseURL: 'https://nusantara-e4408-default-rtdb.firebaseio.com'
-});
+const serviceAccount = require('./serviceAccountKey.json');
+if (!admin.apps.length) {
+  admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount),
+    databaseURL: 'https://nusantara-e4408-default-rtdb.firebaseio.com'
+  });
+}
+
 
 const db = admin.database();
 const apiKeysRef = db.ref('apiKeys');
